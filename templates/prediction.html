@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            font-family: "Times New Roman", serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .text-primary {
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        #news {
+            font-family: "Courier New", monospace;
+            font-size: 14px;
+        }
+
+        #submit {
+            font-family: "Arial Black", sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <header class="signup-header">
+                <h1 class="logo">FAKE NEWS DETECTION</h1>
+            </header>
+            <main class="signup-body">
+                <br>
+                <p class="text-primary"><b>{{prediction_text}}</b></p>
+                <form action="/prediction" method="POST">
+                    <p>
+                        <label for="news">Enter your news here</label>
+                        <input type="text" id="news" name="news" placeholder="Your News" required>
+                    </p>
+                    <p>
+                        <input type="submit" id="submit" value="Check Now">
+                    </p>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

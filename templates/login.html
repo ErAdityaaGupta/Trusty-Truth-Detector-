@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }        
+
+        .outer {
+            background-color: #fff;
+            padding: 3vw;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .signup-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .signup-header h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+        
+        .signup-body {
+            margin-bottom: 20px;
+        }
+        
+        .signup-body label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .signup-body input[type="text"],
+        .signup-body input[type="email"],
+        .signup-body input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .signup-body input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .signup-footer {
+            text-align: center;
+        }
+        
+        .signup-footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .signup-footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+            .outer {
+                max-width: 100%;
+                padding: 5vw;
+            }
+        }
+
+        @media screen and (max-width: 400px) {
+            .signup-header h1 {
+                font-size: 20px;
+            }
+
+            .signup-body input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <header class="signup-header">
+            <h1 class="logo">VIEW AI LOGIN</h1>
+        </header>
+        <main class="signup-body">
+            <form action="/">
+                <p>
+                    <label for="fullname">Fullname</label>
+                    <input type="text" id="fullname" placeholder="Your Name" required>
+                </p>
+                <p>
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Abcd@gmail.com" required>
+                </p>
+                <p>
+                    <label for="password">Your Password</label>
+                    <input type="password" id="password" placeholder="******" required>
+                </p>
+                <p>
+                    <input type="submit" id="submit" value="Login">
+                </p>
+            </form>
+        </main>
+        <footer class="signup-footer">
+            <p>New here? <a href="/signup">Sign Up</a></p>
+        </footer>
+    </div>
+</body>
+</html>
